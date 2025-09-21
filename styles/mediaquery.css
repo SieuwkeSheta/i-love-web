@@ -1,0 +1,15 @@
+/* mediaquery in selector, alles vanaf 600px is een rode achtergrond*/
+body {
+    background: green;
+    
+    @media (width > 600px){
+        background: red;
+    }
+}
+
+/* Losse mediaquery, tussen 900px en 1200px is een blauwe achtergrond */
+@media (900px <= width <= 1200px) {
+    body {
+        background: blue;
+    }
+}
