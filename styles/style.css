@@ -2,10 +2,17 @@ html {
     background-color: #568F87;
     color: #043125;
 }
+@font-face {
+    font-family: "ogre-font";
+    src: url(../assets/Ogerfont-Regular.otf) format('opentype');
+}
+
 main {
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
+
+    font-family: "ogre-font";
 }
 
 header {
