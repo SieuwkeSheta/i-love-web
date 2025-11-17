@@ -1,0 +1,83 @@
+/* Absolute units */
+.absolute section{
+    border: 1px solid purple;
+    margin: 1em;
+    padding: 1em;
+    width: 45%;
+}
+.absolute-1 {
+    & p {
+        width: 11cm;
+    }
+}
+
+.absolute-2{
+    & p {
+        width: 425px;
+    }
+}
+
+/* Relative units en font-family */
+.relative section{
+    border: 1px solid purple;
+    margin: 1em; 
+    padding: 1em;
+    width: 45%;
+}
+
+.relative-1 {
+    & p {
+        width: 27em;
+    }
+}
+
+.relative-2 {
+    & p {
+        width: 53ch;
+    }
+}
+
+.relative-3 {
+    & p {
+        width: 26rem;
+    }
+}
+
+.relative-4 {
+    & p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        width: 28em;
+    }
+}
+
+/* Viewport en container units */
+.viewport-container section {
+    border: 1px solid purple;
+    margin: 1em; 
+    padding: 1em;
+    width: 45%;
+}
+
+.viewport-container-1 {
+    & p {
+        width: 32vw;
+    }
+}
+
+.viewport-container-2 {
+    & p {
+        width: 32cqw;
+    }
+}
+
+.viewport-container-3 {
+    & p {
+        width: 32dvw;
+    }
+}
+
+.viewport-container-4 {
+    & p {
+        width: 32vmax;
+    }
+}
