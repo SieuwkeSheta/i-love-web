@@ -48,12 +48,12 @@
 
     <section>
         
-        <h2 style="color: red;">Wat doe je met attributen <em>type</em>, <em>autoclomplete</em>, <em>inputmode</em> en <em>enterkeyhint</em>?</h2>
+        <h2>Wat doe je met attributen <em>type</em>, <em>autocomplete</em>, <em>inputmode</em> en <em>enterkeyhint</em>?</h2>
         <p>
-            <strong>Type:</strong>Specificeert de soort van de 'input', hoe het in de browser gebruikt kan worden.
-            <br><strong>Autocomplete: </strong>
-            <br><strong>Inputmode:</strong>
-            <br><strong>Enterkeyhint:</strong>
+            <strong>Type:</strong> Specificeert de soort van de 'input', hoe het in de browser gebruikt kan worden.
+            <br><strong>Autocomplete:</strong> geeft de browser aan welke informatie er in een invoerveld verwacht wordt, zodat deze automatisch kan worden ingevuld met eerder opgeslagen gegevens.
+            <br><strong>Inputmode:</strong> geeft de browser een hint welk virtueel toetsenbord er moet worden weergegeven voor een invoerelement.
+            <br><strong>Enterkeyhint:</strong> Zorgt dat de tekst of het icoon op de 'Enter'-toets van een virtueel toetsenbord verandert, bijvoorbeeld op telefoon.
         </p>
 
         <form action="">
@@ -62,6 +62,37 @@
                 <label for="">
                 Checkbox
                 <input type="checkbox">
+                </label>
+            </fieldset>
+        </form>
+
+        <form action="" autocomplete="on">
+            <fieldset>
+                <legend>Input met attribute 'autocomplete' (first name)</legend>
+                <label for="">
+                Voornaam
+                <input type="text" autocomplete="first name">
+                </label>
+                <input type="submit">
+            </fieldset>
+        </form>
+
+        <form action="">
+            <fieldset>
+                <legend>Input met attribute 'inputmode' (email)</legend>
+                <label for="">
+                Email
+                <input type="text" inputmode="email">
+                </label>
+            </fieldset>
+        </form>
+
+        <form action="">
+            <fieldset>
+                <legend>Input met attribute 'enterkeyhint' (search)</legend>
+                <label for="">
+                Text
+                <input type="text" enterkeyhint="search">
                 </label>
             </fieldset>
         </form>
@@ -146,12 +177,6 @@
         </form>
             
     </section>
-
-    <section>
-
-        <h2 style="color: red;">Welke <em>input pseudo-classes</em> ken je nog niet? Maak met allemaal een demo.</h2>
-    </section>
-
 
 </body>
 </html>
