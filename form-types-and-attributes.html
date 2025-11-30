@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form types and Attributes</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        section {
+            border: 2px solid rgb(133, 37, 223);
+            padding: 1em;
+            margin-block: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Input en formulier-element demo's</h1>
+
+    <section>
+        
+        <h2>Waarom heeft elke input een label nodig?</h2>
+        <p>Dan is het zowel voor mensen die screenreaders gebruiken als de rest van de mensen duidelijk wat er in het formlier moet komen te staan.</p>
+
+        <form action="">
+            <fieldset>
+                <legend>Input met Label</legend>
+                <label for="">
+                Text
+                <input type="text">
+                </label>
+            </fieldset>
+        </form>
+        
+
+        <form action="">
+            <fieldset>
+                <legend>Input zonder Label</legend>
+                <input type="text">
+            </fieldset>
+        </form>
+
+    </section>
+
+    <section>
+        
+        <h2 style="color: red;">Wat doe je met attributen <em>type</em>, <em>autoclomplete</em>, <em>inputmode</em> en <em>enterkeyhint</em>?</h2>
+        <p>
+            <strong>Type:</strong>Specificeert de soort van de 'input', hoe het in de browser gebruikt kan worden.
+            <br><strong>Autocomplete: </strong>
+            <br><strong>Inputmode:</strong>
+            <br><strong>Enterkeyhint:</strong>
+        </p>
+
+        <form action="">
+            <fieldset>
+                <legend>Input met attribute 'type' (checkbox)</legend>
+                <label for="">
+                Checkbox
+                <input type="checkbox">
+                </label>
+            </fieldset>
+        </form>
+
+    </section>
+
+    <section>
+
+        <h2>Wat doen <em>fieldsets</em> en <em>legends</em> in een formulier?</h2>
+        <p>
+            <strong>Fieldsets</strong> zijn sections van formulieren.
+            <br><strong>Legends</strong> zijn de headings van 'fieldsets'
+        </p>
+
+        <form action="">
+            <fieldset>
+                <legend>Met legend</legend>
+                <label for="">
+                    Input
+                    <input type="text">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label for="">
+                    Input
+                    <input type="text">
+                </label>
+            </fieldset>
+        </form>
+    
+    </section>
+
+    <section>
+
+        <h2>Wat doen <em>required</em>, <em>maxlength</em>, <em>min</em>, <em>max</em> en <em>step</em>?</h2>
+        <p>
+            <strong>Required</strong> betekend dat je dat gedeelte van het formulier moet invullen voor je het kan versturen.
+            <br><strong>Maxlength</strong> zorgt er voor dat je maar een maximaal aantal characters kan gebruiken in het formulier-element.
+            <br><strong>Min</strong> en <strong>Max</strong> zijn voor getallen, dat de value minimaal of maximaal moet zijn in het formulier-element.
+            <br><strong>Step</strong> is voor getallen, om stappen te maken in hoeveel een getal naar boven of onder gaat.
+        </p>
+        <form action="">
+            <fieldset>
+                <legend>Required</legend>
+                <label for="">
+                    Input
+                    <input type="text" required>
+                </label>
+                <input type="submit">
+            </fieldset>
+        </form>
+
+        <form action="">
+            <fieldset>
+                <legend>Maxlength (6ch)</legend>
+                <label for="">
+                    Input
+                    <input type="text" maxlength="6">
+                </label>
+            </fieldset>
+        </form>
+
+        <form action="">
+            <fieldset>
+                <legend>Min (4)& Max (10)</legend>
+                <label for="">
+                    Input
+                    <input type="number" min="4" max="10">
+                </label>
+            </fieldset>
+        </form>
+
+        <form action="">
+            <fieldset>
+                <legend>Step (1.5)</legend>
+                <label for="">
+                    Input
+                    <input type="number" min="4" step="1.5">
+                </label>
+            </fieldset>
+        </form>
+            
+    </section>
+
+    <section>
+
+        <h2 style="color: red;">Welke <em>input pseudo-classes</em> ken je nog niet? Maak met allemaal een demo.</h2>
+    </section>
+
+
+</body>
+</html>
