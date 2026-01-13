@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respsonsive Webdesign tips</title>
+
+    <link rel="stylesheet" href="responsive-webdesign-tips.css">
+</head>
+<body>
+
+    <h1>Respsonsive Webdesign Tips</h1>
+    <p>Met behulp van <a href="https://www.youtube.com/watch?v=2IV08sP9m3U">deze website van Coding2GO</a></p>
+
+    <section class="relative-padding">
+        <h2>Tip #1 - Relative Padding</h2>
+        <p>Op deze section zit een relative padding van <span>min(5em, 8%)</span></p>
+        <p>De browser kijkt welke size kleiner is, op desktop is 5em kleiner dan de 8% viewport. Op de andere devices is 8% kleiner dan 5em.</p>
+    </section>
+    
+    <section class="responsive-font-sizes">
+        <h2>Tip #2 - Responsive Font Sizes</h2>
+        <p>Op deze section zit een responsive font size op de h2 van <span>clamp(1.4rem, 7vw, 2.5rem)</span></p>
+        <p>De middelste maat 10vw is de maat die standaard op de font-size staat. De browser kijkt of 7vw niet groter of kleiner is dan 1.4rem en 2.5rem, anders neemt de browser die maten over voor de font size. </p>
+    </section>
+
+    <section class="responsive-images">
+        <h2>Tip #3 - Responsive Images</h2>
+        <img src="assets/pink-landscape.jpg" alt="">
+        <p>Op deze images zit een responsive image met <span>max-width: 100%;</span></p>
+        <p></p>
+    </section>
+
+    <section class="viewport-height">
+        <h2>Tip #4 - 100vh (viewport height)</h2>
+        <p>Op deze section zit een <span>height: 100dvh;</span>, wat staat voor 'Dynamic Viewport Height'. Dat laat de browser kijken of er plek moet zijn voor een balk boven in het scherm, als dat zo is dan wordt de viewport height kleiner.</p>
+        <p></p>
+    </section>
+
+    <section class="inert-attribute">
+        <h2>Tip #5 - HTML inert-attribuut</h2>
+        <p>Heeft met toegankelijkheid/ tab elementen te maken in een hamburgermenu.<span>'<'nav inert'>'</span> samen met JS laten de elementen in het hamburgmenu niet tabbaar zijn.</p>
+        <p></p>
+    </section>
+</body>
+</html>

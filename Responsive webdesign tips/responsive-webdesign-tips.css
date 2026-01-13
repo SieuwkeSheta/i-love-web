@@ -1,0 +1,36 @@
+section {
+    background-color: rgb(231, 231, 231);
+    width: 20em;
+    margin: auto;
+    padding: 2.5em;
+    margin-top: 1em;
+
+    span {
+        background-color: rgb(255, 196, 196);
+    }
+}
+
+/* Op desktop is 5em padding kleiner dan 8%, op andere devices is 8% padding kleiner dan 5em */
+.relative-padding {
+    padding: min(5em, 8%);
+}
+
+/* Responsive font grootte calc(minimum grootte, grootte die je wil hebben, maximum grootte) */
+.responsive-font-sizes {
+    h2 {
+        font-size: clamp(1rem, calc(7vw), 2.5rem);
+    }
+}
+
+.responsive-images {
+    width: auto;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.viewport-height {
+    height: 100dvh;
+}
+
