@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Decathlon media gallerij</title>
+    <!-- Link naar CSS  -->
+    <link rel="stylesheet" href="/Extra-decathlon-media-gallerij/media-gallery.css">
+    <!-- Link naar JavaScript  -->
+    <script defer src="/Extra-decathlon-media-gallerij/media-gallery.js"></script>
+</head>
+<body>
+
+    <div class="media-gallery">
+        <!-- Bewaar product knop -->
+        <!-- <form> -->
+            <button class="save-product-button">
+                <svg width="25" height="22" viewBox="0 0 25 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <title>Bewaar product</title>
+                    <path d="M14.1807 2.85547C16.2472 0.723355 19.4873 0.378866 21.7129 2.08496L21.9248 2.25684C24.5457 4.49406 24.6871 8.52284 22.334 10.9512L12.8857 20.707C12.6683 20.9314 12.3278 20.9314 12.1104 20.707L2.66211 10.9512C0.387196 8.59861 0.44921 4.74416 2.83789 2.47168L3.07617 2.25684C5.30414 0.358316 8.69254 0.655645 10.8203 2.85547L10.8213 2.85645L11.7832 3.84766L12.501 4.58691L13.2178 3.84766L14.1797 2.85645L14.1807 2.85547Z" stroke="#3643BA" stroke-width="2"/>
+                </svg>
+            </button>
+        <!-- </form> -->
+        <!-- Grote foto -->
+        <img src="/Extra-decathlon-media-gallerij/media-gallery-assets/tent-front.jpg" alt="Voorkant tent" width="300" class="big-image">
+        
+        <!-- Carousel met kleine foto's -->
+        <ul class="carousel">
+            <li>
+                <label class="img-thumbnail-active">
+                    <input type="radio" name="img-thumbnail-active" checked>
+                    <img src="/Extra-decathlon-media-gallerij/media-gallery-assets/tent-front.jpg" alt="Voorkant tent" width="100" class="small-image">
+                </label>
+            </li>
+            <li>
+                <label class="img-thumbnail-active">
+                    <input type="radio" name="img-thumbnail-active">
+                    <img src="/Extra-decathlon-media-gallerij/media-gallery-assets/tent-bag.jpg" alt="Tas waar tent in zit" width="100" class="small-image">
+                </label>
+            </li>
+            <li>
+                <label class="img-thumbnail-active">
+                    <input type="radio" name="img-thumbnail-active">
+                    <img src="/Extra-decathlon-media-gallerij/media-gallery-assets/tent-top.jpg" alt="Bovenkant tent" width="100" class="small-image">
+                </label>
+            </li>
+            <li>
+                <label class="img-thumbnail-active">
+                    <input type="radio" name="img-thumbnail-active">
+                    <img src="/Extra-decathlon-media-gallerij/media-gallery-assets/tent-detail-back.jpg" alt="Detail van achterkant tent" width="100" class="small-image">
+                </label>
+            </li>
+            <li>
+                <label class="img-thumbnail-active">
+                    <input type="radio" name="img-thumbnail-active">
+                    <img src="/Extra-decathlon-media-gallerij/media-gallery-assets/tent-back.jpg" alt="Achterkant tent" width="100" class="small-image">
+                </label>
+            </li>
+            <li>
+                <label class="img-thumbnail-active">
+                    <input type="radio" name="img-thumbnail-active">
+                    <img src="/Extra-decathlon-media-gallerij/media-gallery-assets/tent-side-right-detail.jpg" alt="Detail van rechter zijkant tent" width="100" class="small-image">
+                </label>
+            </li>
+            <li>
+                <label class="img-thumbnail-active">
+                    <input type="radio" name="img-thumbnail-active">
+                    <img src="/Extra-decathlon-media-gallerij/media-gallery-assets/tent-side-right.jpg" alt="Rechter zijkant tent" width="100" class="small-image">
+                </label>
+            </li>
+            <li>
+                <label class="img-thumbnail-active">
+                    <input type="radio" name="img-thumbnail-active">
+                    <img src="/Extra-decathlon-media-gallerij/media-gallery-assets/tent-side-left.jpg" alt="Linker zijkant tent" width="100" class="small-image">
+                </label>
+            </li>
+            <li>
+                <label class="img-thumbnail-active">
+                    <input type="radio" name="img-thumbnail-active">
+                    <img src="/Extra-decathlon-media-gallerij/media-gallery-assets/tent-inside.jpg" alt="Binnenkant tent" width="100" class="small-image">
+                </label>
+            </li>
+            <li>
+                <label class="img-thumbnail-active">
+                    <input type="radio" name="img-thumbnail-active">
+                    <img src="/Extra-decathlon-media-gallerij/media-gallery-assets/tent-details.jpg" alt="Extra informatie tent" width="100" class="small-image">
+                </label>
+            </li>
+        </ul>
+        
+        <!-- Knop naar links voor meer afbeeldingen -->
+        <button class="media-gallery-button prev1">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke-width="1.5">
+                <title>Afbeeldingen naar links</title>
+                <path d="M15 6L9 12L15 18" stroke=""></path>
+            </svg>
+        </button>
+        
+        <!-- Knop naar rechts voor meer afbeeldingen -->
+        <button class="media-gallery-button next1">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke-width="1.5">
+                <title>Afbeeldingen naar rechts</title>
+                <path d="M9 18L15 12L9 6" stroke=""></path>
+            </svg>
+        </button>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+:root {
+     /* Colors */
+    --brand-color: rgb(54, 67, 186);
+    --commercial-color: rgb(255, 205, 78);
+    --content-neutral-light:rgb(255, 255, 255);
+    --content-neutral-dark:rgb(16, 16, 16);
+    --content-quiet:rgb(97, 97, 97);
+
+    --navigation-button-hover: rgb(241, 240, 238);
+    --navigation-button-active: rgb(225, 224, 223);
+
+    --media-button-border-color: rgb(148, 148, 148);
+    --media-button-hover-state-background-color: rgb(234, 233, 247);
+    --media-button-active-state-background-color: rgb(214, 212, 240);
+
+}
+.media-gallery {
+    padding: 1em 1.5em;
+    position: relative;
+
+    /* Bewaar product knop */
+    .save-product-button {
+        position: absolute;
+        top: 3em;
+        right: 3em;
+        background-color: transparent;
+        border: 1px solid transparent;
+        
+
+        &:hover {
+            cursor: pointer;
+            svg {
+                fill: #C4C0F7;
+            }
+        }
+
+        /* Active state als er op geklikt is */
+        &.active {
+            animation-name: --heart-pound;
+            animation-duration: 0.8s;
+
+            svg {
+                fill: var(--brand-color);
+            }
+        }
+    }
+
+    .big-image {
+        width: 100%;
+    }
+
+    /* Carousel met kleine foto's */
+    ul {
+        list-style: none;
+        padding: 1em 0 0;
+        display: flex;
+        overflow-x: auto;
+        gap: 0.5em;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+
+        img {
+            opacity: 0.7;
+            display:block;
+        }
+
+        /* Label om radiobutton en img */
+        .img-thumbnail-active {
+            position: relative;
+            display:block;
+
+            /* Radiobutton*/
+            & input[type="radio"] {
+                position: absolute;
+                inset: 0;
+                appearance: none;
+                z-index: 1;
+
+                /* Active/focused kleine foto */
+                &:checked {
+                    box-shadow: inset 0 0 0 2px var(--brand-color);
+
+                    &+ img {
+                        opacity: 1;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        /* Hover state als je over een andere kleine foto hovert */
+        .img-thumbnail-active:has(input[type="radio"]:hover) {
+            img {
+                transition: 0.3s;
+                opacity: 1;
+            }
+        }
+
+        /* Bij oneven getallen snapt de image-slider  */
+        li:nth-of-type(odd){
+            scroll-snap-align: start;
+        }
+    }
+
+        /* Media gallery buttons */
+    .media-gallery-button {
+        width: 3.5em;
+        aspect-ratio: 1;
+        background-color: transparent;
+        border: 1px solid var(--media-button-border-color);
+        border-radius: 50%;
+        transition: 0.4s;
+
+        &:hover {
+            cursor: pointer;
+            background-color: var(--media-button-hover-state-background-color);
+        }
+
+        &:active {
+            background-color: var(--media-button-active-state-background-color);
+        }
+
+        svg {
+            vertical-align: bottom;
+            stroke: var(--content-neutral-dark);
+        }
+    }
+
+
+    .media-gallery-button {
+        margin-top: 1em;
+    }
+}
+
+/* Animatie die hart laat knoppen bij bewaar product */
+@keyframes --heart-pound {
+  50% {
+    transform: scale(1.5)
+  }
+  100% {
+    transform: scale(1);
+  }
+}
