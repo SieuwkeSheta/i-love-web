@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validatie</title>
+
+    <style>
+        body {
+            background-color: rgb(24, 24, 24);
+            color: beige;
+        }
+        section {
+            border: 2px solid blue;
+            padding: 1em;
+            width: max-content;
+            form {
+                width: max-content;
+                
+                & input {
+                    accent-color: purple;
+                }
+                &:has(:user-invalid) {
+                    input:not([type="submit"]) {
+                        outline: 2px solid red;
+                    }
+                }
+            }
+        }
+    </style>
+
+    <script defer type="module">
+        // Stap 1: zoek de input en stop die in een variabele
+        let inputElement = document.querySelector('input');
+
+        // Stap 2: luister naar het invalid event, en wacht tot dat afgevuurd wordt..
+        inputElement.addEventListener('invalid', function() {
+        
+          // Stap 3: pas de tekst in de validatiemelding aan
+          inputElement.setCustomValidity('Dit veld mag niet leeg zijn hoor..');
+        
+        });
+
+        // Stap 1: zoek de input en stop die in een variabele
+        const inputRadio = document.querySelector('input[type="radio"]')
+
+        // Stap 2: luister naar het invalid event, en wacht tot dat afgevuurdt wordt..
+        inputRadio.addEventListener('invalid', function(){
+            // Stap 3: pas de tekst in de validatiemelding aan
+            inputRadio.setCustomValidity('KIES IETS!')
+        })
+    </script>
+</head>
+<body>
+    
+    <section>
+        <h1>Validatie formulier</h1>
+    
+        <form>
+          <label>Zoekterm <input required></label>
+          <button type="submit">Zoek!</button>
+        </form>
+
+        <form>
+            <fieldset>
+                <legend>Selecteer een optie</legend>
+
+                <label><input type="radio" name="option" required> Optie 1</label>
+                <label><input type="radio" name="option" required> Optie 2</label>
+                <label><input type="radio" name="option" required> Optie 3</label>
+
+                <input type="submit" value="Verstuur">
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>
